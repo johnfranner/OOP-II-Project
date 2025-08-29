@@ -6,7 +6,9 @@ This project was developed for the Object Oriented Programming II assignment.
 Compile the source files and run the `App` class:
 
 ```bash
-javac -d out src/com/books/*.java
+cd OOP-II-Project
+$srcs = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
+javac -d out $srcs
 java -cp out com.books.App
 ```
 You can also run with the --demo flag to skip the interactive menu.
